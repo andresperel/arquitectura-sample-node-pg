@@ -1,7 +1,12 @@
 import 'dotenv/config'
 import express 	from "express";	// hacer npm i express
 import cors 	from "cors";	// hacer npm i cors
+import MateriasController       from "./controllers/materias-controller.js"
+import CalificacionesController from "./controllers/calificaciones-controller.js"
 
+// ... junto con los app.use existentes:
+app.use("/api/materias",        MateriasController);
+app.use("/api/calificaciones",  CalificacionesController);
 // Controllers
 import AlumnosController    from "./controllers/alumnos-controller.js"
 import CursosController     from "./controllers/cursos-controller.js"
